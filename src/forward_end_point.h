@@ -24,13 +24,41 @@ extern "C" {
 
 
 typdef struct {
+	/*
+	 * Has account keys and ready to serve
+	 */
 	bool account;
+	/*
+	 * This service created the account
+	 */
 	bool owner;
+	/*
+	 * Multiple connections can transparently listen to a session.
+	 */
 	bool listen;
+	/*
+	 * Can pickup an idle session.
+	 */
 	bool pickup;
+	/*
+	 * Can pickup a session that is already active on another socket.
+	 */
 	bool interrupt;
+	/*
+	 * Can provide information on how the service is being used.
+	 */
 	bool feedback;
+	bool voice;
+	bool video;
+	bool media;
+	/*
+	 * Can perform cover listening and attacks.
+	 */
 	bool militirised;
+	/*
+	 * Covert requests will alert someone or will behave in unexpected ways.
+	 */
+	bool spy_vs_spy;
 } capabilities_t;
 
 
